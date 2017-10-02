@@ -5,8 +5,8 @@
 
 Name: opencpn-plugin-draw
 Summary: OpenCPN general drawing plugin
-Version: 0.0
-Release: 0.1.%{shortcommit}%{?dist}
+Version: 1.4.4
+Release: 1.%{shortcommit}%{?dist}
 License: GPLv2+
 
 Source0: https://github.com/%{owner}/%{plugin}_pi/archive/%{commit}/%{plugin}_pi-%{shortcommit}.tar.gz
@@ -20,7 +20,8 @@ BuildRequires: wxGTK3-devel
 BuildRequires: zlib-devel
 
 Requires: opencpn%{_isa}
-Supplements: opencpn%{_isa}
+Enhances: opencpn%{_isa}
+Provides: opencpn-plugin-ocpn_draw%{_isa} = %{version}-%{release}
 
 %description
 The OpenCPN Draw plugin is designed to allow users to place
